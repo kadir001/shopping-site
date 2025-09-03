@@ -31,4 +31,5 @@ shopping-site/
 ## 🚀 How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/shopping-site.git
+   git clone https://github.com/your-username/shopping-site.git  OR
+   just click : https://kadir001.github.io/shopping-site/ 
