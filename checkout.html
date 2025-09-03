@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kassa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html" class="fw-bold">🛍️ MijnShop</a>
+  </div>
+
+  <div class="container text-center">
+    <h1 class="mb-4">💳 Afrekenen</h1>
+
+    <div class="shopping-cart" id="checkout-cart"></div>
+    <p class="fs-5"><strong>Totaal: €<span id="checkout-total">0</span></strong></p>
+
+    <form>
+      <input type="text" placeholder="Naam" required><br><br>
+      <input type="text" placeholder="Adres" required><br><br>
+      <select required>
+        <option value="">Kies betaalmethode</option>
+        <option>iDEAL</option>
+        <option>Creditcard</option>
+        <option>PayPal</option>
+      </select><br><br>
+      <button type="submit" class="checkout">Bestelling Plaatsen</button>
+    </form>
+  </div>
+
+  <script>
+    // Ophalen winkelmandje
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+    const checkoutCart = document.getElementById("checkout-cart");
+
+    cart.forEach(item => {
+      let div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <div class="title-price-x">
+          <div class="title-price">
+            <p>${item.name}</p>
+            <span class="cart-item-price">€${item.price}</span>
+          </div>
+        </div>
+      `;
+      checkoutCart.appendChild(div);
+      total += item.price;
+    });
+
+    document.getElementById("checkout-total").textContent = total;
+  </script>
+</body>
+</html>

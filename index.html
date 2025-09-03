@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html" class="fw-bold">🛍️ MijnShop</a>
+    <a href="checkout.html">
+      <div class="cart">
+        <i class="bi bi-cart"></i>
+        <div id="cart-count" class="cartAmount">0</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Shop -->
+  <div class="shop" id="product-list"></div>
+
+  <!-- Winkelmand -->
+  <div class="container text-center">
+    <h3 class="text-center">🛍️ Winkelmand</h3>
+    <div class="shopping-cart" id="cart"></div>
+    <p class="fs-5"><strong>Totaal: €<span id="total">0</span></strong></p>
+    <a href="checkout.html" class="checkout">Ga naar kassa</a>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
