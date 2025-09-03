@@ -27,9 +27,8 @@ shopping-site/
 - 🎨 Styled with **Bootstrap Icons** + custom **CSS**
 
 ---
-
+click or clone for the result: https://kadir001.github.io/shopping-site/
 ## 🚀 How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/shopping-site.git  OR
-   just click : https://kadir001.github.io/shopping-site/ 
+   git clone https://github.com/your-username/shopping-site.git
